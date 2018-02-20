@@ -3,10 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MTnew"
              x:Class="MTnew.MainPage">
-    <StackLayout>
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Hej"></Label>
+            </StackLayout>
+ 
+        <ListView x:Name="Opliste">
+            <ListView.ItemTemplate>
+                <DataTemplate>                    
+                    <ViewCell>
+                        <RelativeLayout>
+                                <Label Text="{Binding Overskrift}"   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
+                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+                                
+                            <Label Text="{Binding Indhold}"          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=125}"
+                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+                        </RelativeLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
