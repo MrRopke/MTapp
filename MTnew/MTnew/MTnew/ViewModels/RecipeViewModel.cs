@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using MTnew.Models;
 using MTnew.View;
 using MTnew.ViewModels;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MTnew.ViewModels
 {
-    public class RecipeViewModel
+    public class RecipeViewModel : ContentPage
     {
         public Recipes Rec { get; set; }
 
@@ -18,5 +20,7 @@ namespace MTnew.ViewModels
             Rec = recipe;
 
         }
+
+
     }
 }
