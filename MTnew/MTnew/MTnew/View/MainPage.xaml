@@ -5,10 +5,10 @@
              x:Class="MTnew.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <Label Text="Hej"></Label>
+            <StackLayout BackgroundColor="#2196F3" HeightRequest="150">
+                <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
             </StackLayout>
- 
+            
         <ListView x:Name="Opliste">
             <ListView.ItemTemplate>
                 <DataTemplate>                    
@@ -17,8 +17,6 @@
                                 <Label Text="{Binding Overskrift}"   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
                                                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
                                 
-                            <Label Text="{Binding Indhold}"          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=125}"
-                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
                         </RelativeLayout>
                     </ViewCell>
                 </DataTemplate>

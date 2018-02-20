@@ -10,9 +10,7 @@ namespace MTnew
 {
     public partial class MainPage : ContentPage
     {
-        public List<Recipes> Opskriftsliste = new List<Recipes>();
-
-        
+        public List<Recipes> Opskriftsliste = new List<Recipes>();        
 
         public MainPage()
         {
@@ -20,7 +18,9 @@ namespace MTnew
             lavopskrift(1, "Karry ret", "- Karry");
             lavopskrift(2, "Kokos ret", "- Kokos");
             lavopskrift(3, "Lasagne", "- Lasagne pladder");            
-            Opliste.ItemsSource = Opskriftsliste;            
+            Opliste.ItemsSource = Opskriftsliste;
+
+            //Opskriftsliste.Add(new Recipes() { Rid = 1, Overskrift = "Mads Boller i Karry", Indhold = "- Karry og boller" });
 
         }
 
