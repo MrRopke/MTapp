@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 using MTnew.Models;
+using MTnew.View;
+using MTnew.ViewModels;
 
 namespace MTnew
 {
@@ -22,6 +25,12 @@ namespace MTnew
 
             //Opskriftsliste.Add(new Recipes() { Rid = 1, Overskrift = "Mads Boller i Karry", Indhold = "- Karry og boller" });
 
+        }
+
+        private async void MyRecipeTapped(object sender, ItemTappedEventArgs e)
+        {
+            var recipee = e.Item as Recipes;
+            await Navigation.PushModalAsync(new RecipeDetails(new RecipeViewModel(recipee)));
         }
 
         public void lavopskrift(int id, string overskrift, string indhold)

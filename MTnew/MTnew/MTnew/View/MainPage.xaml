@@ -15,7 +15,8 @@
                 </StackLayout>
             </StackLayout>
 
-            <ListView x:Name="Opliste">
+            <ListView x:Name="Opliste"
+                      ItemTapped="MyRecipeTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>                    
                     <ViewCell>
