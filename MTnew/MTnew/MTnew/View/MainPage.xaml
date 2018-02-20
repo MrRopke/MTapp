@@ -5,15 +5,24 @@
              x:Class="MTnew.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout BackgroundColor="#2196F3" HeightRequest="150">
-                <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
+                <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
+                    <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                    <Button Text="Tilføj" TextColor="White"/>
+                </StackLayout>
             </StackLayout>
-            
-        <ListView x:Name="Opliste">
+
+            <ListView x:Name="Opliste">
             <ListView.ItemTemplate>
                 <DataTemplate>                    
                     <ViewCell>
                         <RelativeLayout>
+                                <Label Text="-"                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
+                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+
                                 <Label Text="{Binding Overskrift}"   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
                                                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
                                 
