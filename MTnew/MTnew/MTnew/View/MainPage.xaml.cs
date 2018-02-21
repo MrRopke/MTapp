@@ -18,12 +18,15 @@ namespace MTnew
         public MainPage()
         {
             InitializeComponent();
+
+
             lavopskrift(1, "Karry ret", "- Karry");
             lavopskrift(2, "Kokos ret", "- Kokos");
             lavopskrift(3, "Lasagne", "- Lasagne pladder");            
             Opliste.ItemsSource = Opskriftsliste;
 
             //Opskriftsliste.Add(new Recipes() { Rid = 1, Overskrift = "Mads Boller i Karry", Indhold = "- Karry og boller" });
+
 
         }
 
@@ -42,6 +45,11 @@ namespace MTnew
             Opskriftsliste.Add(rc);
         }
 
+        async void AddPage(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new Addpage());
 
+
+        }
     }
 }

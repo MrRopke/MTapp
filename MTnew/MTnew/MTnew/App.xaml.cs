@@ -13,7 +13,7 @@ namespace MTnew
         {
             InitializeComponent();
 
-            MainPage = new MTnew.MainPage();
+            MainPage = new NavigationPage(new MTnew.MainPage());
         }
 
         protected override void OnStart()

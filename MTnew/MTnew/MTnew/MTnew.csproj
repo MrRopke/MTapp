@@ -47,6 +47,9 @@
     <Compile Include="View\RecipeDetails.xaml.cs">
       <DependentUpon>RecipeDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Addpage.xaml.cs">
+      <DependentUpon>Addpage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\MainPage.xaml">
@@ -54,6 +57,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Addpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
