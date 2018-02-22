@@ -12,6 +12,29 @@ namespace MTnew.Models
         public int Rid { get; set; }
         public string Overskrift { get; set; }
         public string Indhold { get; set; }
-        
+
+        public Recipes()
+        {}
+        public Recipes (string overskrift, string indhold)
+        {
+            this.Overskrift = overskrift;
+            this.Indhold = indhold;
+        }
+
+        public bool CheckInformation()
+        {
+            if (!this.Overskrift.Equals(""))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+
     }
 }
