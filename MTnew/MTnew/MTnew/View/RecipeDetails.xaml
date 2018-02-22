@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MTnew.View.RecipeDetails">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor = "#cfe8fc">
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
 

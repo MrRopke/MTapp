@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:MTnew"
              x:Class="MTnew.MainPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor = "#cfe8fc">
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
