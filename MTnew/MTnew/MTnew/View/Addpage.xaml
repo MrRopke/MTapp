@@ -6,7 +6,7 @@
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
 
                 <StackLayout Orientation="Vertical"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Back" TextColor="White" Clicked="Backvoid" />
+                    <Button Text="Back" TextColor="White" Clicked="Backvoid" BackgroundColor = "#0961aa"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
@@ -15,13 +15,15 @@
 
             </StackLayout>
 
-            <StackLayout>
-            <Label x:Name = "Lbl_Overskrift" Text = "Overskrift"/>
-            <Entry x:Name = "Entry_Overskrift" Placeholder = "Overskrift"/>
-            <Label x:Name = "Lbl_beskrivelse" Text = "Beskrivelse"/>
-            <Entry x:Name = "Entry_Beskrivelse" Placeholder = "Beskrivelse"/>
-            <Button x:Name = "BTN_AddDish" Text = "Tilføj Ret" Clicked = "AddButton"/>
+            <StackLayout Padding = "0,10,0,0">
+                <StackLayout Orientation = "Vertical">
+                    <Label x:Name = "Lbl_Overskrift" Text = "Overskrift" FontSize = "50" HorizontalTextAlignment ="Center"/>
+                    <Entry x:Name = "Entry_Overskrift" Placeholder = "Write here" HorizontalTextAlignment ="Center"/>
+                    <Label x:Name = "Lbl_beskrivelse" Text = "Beskrivelse" Font = "25" HorizontalTextAlignment ="Center"/>
 
+                    <Editor x:Name = "Entry_Beskrivelse"  VerticalOptions = "CenterAndExpand" HeightRequest = "80" />
+                    <Button x:Name = "BTN_AddDish" Text = "Add your dish" Clicked = "AddButton" BackgroundColor = "#008000"/>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
 	</ContentPage.Content>

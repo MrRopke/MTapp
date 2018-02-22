@@ -11,7 +11,7 @@
                     <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Add" TextColor="White" Clicked="AddPage"/>
+                    <Button Text="Add" TextColor="White" Clicked="AddPage" BackgroundColor = "#0961aa"/>
                 </StackLayout>
             </StackLayout>
 
@@ -21,11 +21,11 @@
                 <DataTemplate>                    
                     <ViewCell>
                         <RelativeLayout>
-                                <Label Text="-"                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
-                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+                                <Label Text="-"                                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
+                                                                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
 
-                                <Label Text="{Binding Overskrift}"   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
-                                                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+                                <Label Text="{Binding Overskrift}" Font = "18"  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
+                                                                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
                                 
                         </RelativeLayout>
                     </ViewCell>
