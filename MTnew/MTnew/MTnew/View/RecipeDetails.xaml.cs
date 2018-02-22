@@ -26,9 +26,12 @@ namespace MTnew.View
 
             BindingContext = this.viewModel = viewModel;
         }
-        public async void Backvoid()
+
+        void Backvoid(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new MainPage());
+            //await NavigationPage(new MTnew.MainPage());
+            //await Navigation.PushModalAsync(new MainPage());
+            Navigation.PopModalAsync();
         }
     }
 }

@@ -28,5 +28,12 @@ namespace MTnew.View
 
         }
 
+        void Backvoid(object sender, EventArgs args)
+        {
+            //await NavigationPage(new MTnew.MainPage());
+            //await Navigation.PushModalAsync(new MainPage());
+            Navigation.PopModalAsync();
+        }
+
     }
 }

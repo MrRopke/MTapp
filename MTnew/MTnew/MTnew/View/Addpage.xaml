@@ -2,13 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MTnew.View.Addpage">
 	<ContentPage.Content>
         <StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
+
+                <StackLayout Orientation="Vertical"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Button Text="Back" TextColor="White" Clicked="Backvoid" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding Rec.Overskrift}" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout>
             <Label x:Name = "Lbl_Overskrift" Text = "Overskrift"/>
             <Entry x:Name = "Entry_Overskrift" Placeholder = "Overskrift"/>
             <Label x:Name = "Lbl_beskrivelse" Text = "Beskrivelse"/>
             <Entry x:Name = "Entry_Beskrivelse" Placeholder = "Beskrivelse"/>
             <Button x:Name = "BTN_AddDish" Text = "Tilføj Ret" Clicked = "AddButton"/>
 
-            
+            </StackLayout>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

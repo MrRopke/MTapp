@@ -45,11 +45,9 @@ namespace MTnew
             Opskriftsliste.Add(rc);
         }
 
-        async void AddPage(object sender, EventArgs args)
+        void AddPage(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new Addpage());
-
-
+            Navigation.PushModalAsync(new Addpage());
         }
     }
 }

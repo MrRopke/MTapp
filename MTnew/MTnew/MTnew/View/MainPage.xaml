@@ -11,7 +11,7 @@
                     <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Tilføj" TextColor="White" Clicked="AddPage"/>
+                    <Button Text="Add" TextColor="White" Clicked="AddPage"/>
                 </StackLayout>
             </StackLayout>
 
