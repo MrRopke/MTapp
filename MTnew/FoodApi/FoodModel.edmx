@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A35D00_FoodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A35D00_Food.dbo.Retter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Retter">
+          <Key>
+            <PropertyRef Name="Indhold" />
+          </Key>
+          <Property Name="Rid" Type="int" />
+          <Property Name="Overskrift" Type="varchar" MaxLength="50" />
+          <Property Name="Indhold" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_A35D00_FoodModelStoreContainer">
+          <EntitySet Name="Retter" EntityType="Self.Retter" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Retter].[Rid] AS [Rid], 
+    [Retter].[Overskrift] AS [Overskrift], 
+    [Retter].[Indhold] AS [Indhold]
+    FROM [dbo].[Retter] AS [Retter]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A35D00_FoodModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Retter">
+          <Key>
+            <PropertyRef Name="Indhold" />
+          </Key>
+          <Property Name="Rid" Type="Int32" />
+          <Property Name="Overskrift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Indhold" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_A35D00_FoodEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Retter" EntityType="Self.Retter" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A35D00_FoodModelStoreContainer" CdmEntityContainer="DB_A35D00_FoodEntities">
+          <EntitySetMapping Name="Retter">
+            <EntityTypeMapping TypeName="DB_A35D00_FoodModel.Retter">
+              <MappingFragment StoreEntitySet="Retter">
+                <ScalarProperty Name="Rid" ColumnName="Rid" />
+                <ScalarProperty Name="Overskrift" ColumnName="Overskrift" />
+                <ScalarProperty Name="Indhold" ColumnName="Indhold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -12,6 +12,7 @@ namespace MTnew.Models
         public int Rid { get; set; }
         public string Overskrift { get; set; }
         public string Indhold { get; set; }
+        public int UserId { get; set; }
 
         public Recipes()
         {}
