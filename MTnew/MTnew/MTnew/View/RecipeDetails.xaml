@@ -19,13 +19,9 @@
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout>
-
-                <StackLayout BackgroundColor="#2196F3" HeightRequest="200" Padding="10" Margin="10">
+            <StackLayout BackgroundColor="#2196F3" Padding="10" Margin="10" HeightRequest="200">                
                     <Label Text="Ingredienser:" FontSize="Medium" TextColor="White"></Label>
-                    <Label Text="{Binding Rec.Indhold}"></Label>                                        
-                </StackLayout>
-                
+                    <Label Text="{Binding Rec.Indhold}"></Label>
             </StackLayout>
             
         </StackLayout>

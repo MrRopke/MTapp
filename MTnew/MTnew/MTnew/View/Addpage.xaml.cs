@@ -38,7 +38,7 @@ namespace MTnew.View
         }
 
         void Overskrift_Change(object sender, TextChangedEventArgs e)
-        {  
+        {
             if (!Entry_Overskrift.Equals("Write here"))
             {
                 BTN_AddDish.BackgroundColor = Color.MediumSpringGreen;
