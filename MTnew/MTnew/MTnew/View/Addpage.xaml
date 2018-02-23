@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MTnew.View.Addpage">
-	<ContentPage.Content>
+    <ContentPage.Content>
         <StackLayout BackgroundColor = "#cfe8fc">
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
@@ -17,13 +17,16 @@
             
             <StackLayout Padding = "0,10,0,0">
                 <StackLayout>
+                    
                     <Label x:Name = "Lbl_Overskrift" Text = "Overskrift" FontSize = "50" HorizontalTextAlignment ="Center"/>     
                     <Entry x:Name = "Entry_Overskrift" Placeholder = "Write here" HorizontalTextAlignment ="Center"/>
                     <Label x:Name = "Lbl_beskrivelse" Text = "Beskrivelse" Font = "25" HorizontalTextAlignment ="Center"/>
-                    <Editor x:Name = "Entry_Beskrivelse"  VerticalOptions = "CenterAndExpand" HeightRequest = "80" />
-                    <Button x:Name = "BTN_AddDish" Text = "Add your dish" Clicked = "AddButton" BackgroundColor = "#008000"/>
+                    <Editor x:Name = "Entry_Beskrivelse"  VerticalOptions = "EndAndExpand"  HeightRequest = "80" />
+                        <StackLayout Margin = "30,0,30,0">
+                            <Button x:Name = "BTN_AddDish" Text = "Add your dish" Clicked = "AddButton" BackgroundColor = "#008000" HeightRequest = "60"/>
+                        </StackLayout>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
