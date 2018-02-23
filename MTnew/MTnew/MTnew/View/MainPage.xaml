@@ -2,13 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MTnew"
-             x:Class="MTnew.MainPage">
+             x:Class="MTnew.MainPage"
+             BackgroundImage = "FoodBG.JPG">
+             
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor = "#cfe8fc">
+        <StackLayout BackgroundColor = "#cfe8fc" Opacity = "0.8">
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
-                    <Label Text="Mine Retter" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
+                    <Label Text="My Recipies" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalTextAlignment = "Center" FontSize="Large" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
                     <Button Text="Add" TextColor="White" Clicked="AddPage" BackgroundColor = "#0961aa"/>
@@ -21,11 +24,11 @@
                 <DataTemplate>                    
                     <ViewCell>                            
                         <RelativeLayout>
-                                <Label Text="-"                                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
+                                <Label Text=" - "                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
                                                                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
 
-                                <Label Text="{Binding Overskrift}" Font = "18"  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
-                                                                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
+                                <Label Text="{Binding Overskrift}" Font = "25"  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"
+                                                                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}" TextColor = "Black"/>
                                 
                         </RelativeLayout>
                     </ViewCell>

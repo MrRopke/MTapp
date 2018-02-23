@@ -114,6 +114,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\FoodBG.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -125,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MTnew\MTnew.csproj">
-      <Project>{ba27f5b1-18d8-4933-830e-7ce600c5603e}</Project>
+      <Project>{B1EA3EEC-B7F7-49CD-8C68-DF611B1F2EEA}</Project>
       <Name>MTnew</Name>
     </ProjectReference>
   </ItemGroup>

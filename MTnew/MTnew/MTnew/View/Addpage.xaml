@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MTnew.View.Addpage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MTnew.View.Addpage"
+    BackgroundImage = "FoodBG.JPG">
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor = "#cfe8fc">
-
-            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
-
+        
+        <StackLayout BackgroundColor="#2196F3" Opacity = "0.9">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                    
                 <StackLayout Orientation="Vertical"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
                     <Button Text="Back" TextColor="White" Clicked="Backvoid" BackgroundColor = "#0961aa"/>
                 </StackLayout>
@@ -15,18 +19,19 @@
 
             </StackLayout>
             
-            <StackLayout Padding = "0,10,0,0">
-                <StackLayout>
+            <StackLayout >
+                <StackLayout BackgroundColor="#2196F3">
                     
-                    <Label x:Name = "Lbl_Overskrift" Text = "Overskrift" FontSize = "50" HorizontalTextAlignment ="Center" TextColor = "#5978a6"/>     
+                    <Label x:Name = "Lbl_Overskrift" Text = "Headline" FontAttributes = "Bold" FontSize = "50" HorizontalTextAlignment ="Center" TextColor = "Black"/>     
                     <Entry x:Name = "Entry_Overskrift" Placeholder = "Write here" HorizontalTextAlignment ="Center" TextChanged = "Overskrift_Change"/>
-                    <Label x:Name = "Lbl_beskrivelse" Text = "Beskrivelse" Font = "25" HorizontalTextAlignment ="Center"/>
+                    <Label x:Name = "Lbl_beskrivelse" Text = "Description" Font = "30" HorizontalTextAlignment ="Center" TextColor = "Black"/>
                     <Editor x:Name = "Entry_Beskrivelse"  VerticalOptions = "EndAndExpand"  HeightRequest = "80" />
                         <StackLayout Margin = "30,0,30,0">
                             <Button x:Name = "BTN_AddDish" Text = "Add your dish" Clicked = "AddButton" BackgroundColor = "Gray" HeightRequest = "60" />
                         </StackLayout>
                 </StackLayout>
             </StackLayout>
+                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

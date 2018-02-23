@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MTnew.View.RecipeDetails">
+             x:Class="MTnew.View.RecipeDetails"
+             BackgroundImage = "FoodBG.JPG">
     <ContentPage.Content>
-        <StackLayout BackgroundColor = "#cfe8fc">
+        <StackLayout BackgroundColor = "#cfe8fc" Opacity = "0.8">
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
 
@@ -20,8 +21,8 @@
             </StackLayout>
 
             <StackLayout BackgroundColor="#2196F3" Padding="10" Margin="10" HeightRequest="200">                
-                    <Label Text="Ingredienser:" FontSize="Medium" TextColor="White"></Label>
-                    <Label Text="{Binding Rec.Indhold}"></Label>
+                    <Label Text="Ingredients:" FontSize="25" TextColor="Black"></Label>
+                    <Label Text="{Binding Rec.Indhold}" TextColor = "Black"></Label>
             </StackLayout>
             
         </StackLayout>
