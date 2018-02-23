@@ -8,6 +8,8 @@ namespace MTnew.View
 {
     public partial class Addpage : ContentPage
     {
+
+
         public Addpage()
         {
             InitializeComponent();
@@ -17,15 +19,15 @@ namespace MTnew.View
         {
             Recipes recipes = new Recipes(Lbl_Overskrift.Text, Lbl_beskrivelse.Text);
 
+
             if (recipes.CheckInformation())
             {
-                DisplayAlert("Oprettelse", "Retten er oprettet", "OK");
+                DisplayAlert("The dish", "The dish is added", "OK");
             }
             else
             {
-                DisplayAlert("Oprettelse", "Overskriften er TOM!?", "OK");
+                DisplayAlert("The dish", "You need a headline", "OK");
             }
-
         }
 
         void Backvoid(object sender, EventArgs args)
@@ -35,5 +37,12 @@ namespace MTnew.View
             Navigation.PopModalAsync();
         }
 
+        void Overskrift_Change(object sender, TextChangedEventArgs e)
+        {  
+            if (!Entry_Overskrift.Equals("Write here"))
+            {
+                BTN_AddDish.BackgroundColor = Color.MediumSpringGreen;
+            }
+        }
     }
 }

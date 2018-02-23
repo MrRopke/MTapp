@@ -23,7 +23,7 @@ namespace MTnew.Models
 
         public bool CheckInformation()
         {
-            if (!this.Overskrift.Equals(""))
+            if (!this.Overskrift.Equals("") || !this.Overskrift.Equals("Write here"))
             {
                 return true;
             }
@@ -32,6 +32,8 @@ namespace MTnew.Models
                 return false;
             }
         }
+
+
 
 
 
