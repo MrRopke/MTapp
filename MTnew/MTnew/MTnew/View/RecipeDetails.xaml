@@ -8,14 +8,14 @@
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" BackgroundColor="#2196F3">
 
                 <StackLayout Orientation="Vertical"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Back" TextColor="White" Clicked="Backvoid" />
+                    <Button Text="Back" TextColor="White" Clicked="Backvoid" BackgroundColor = "#0961aa"/>
                 </StackLayout>
                 
                 <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
                     <Label Text="{Binding Rec.Overskrift}" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Edit" TextColor="White"/>
+                    <Button Text="Edit" TextColor="White" BackgroundColor = "#0961aa"/>
                 </StackLayout>
             </StackLayout>
 
