@@ -19,7 +19,7 @@
                       ItemTapped="MyRecipeTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>                    
-                    <ViewCell>
+                    <ViewCell>                            
                         <RelativeLayout>
                                 <Label Text="-"                                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
                                                                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>

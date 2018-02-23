@@ -21,9 +21,9 @@
 
             <StackLayout>
 
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Beskrivelse"/>
-                    <Label Text="{Binding Rec.Indhold}"/>
+                <StackLayout BackgroundColor="#2196F3" HeightRequest="200" Padding="10" Margin="10">
+                    <Label Text="Ingredienser:" FontSize="Medium" TextColor="White"></Label>
+                    <Label Text="{Binding Rec.Indhold}"></Label>                                        
                 </StackLayout>
                 
             </StackLayout>
