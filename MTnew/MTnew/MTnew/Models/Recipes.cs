@@ -12,14 +12,15 @@ namespace MTnew.Models
         public int Rid { get; set; }
         public string Overskrift { get; set; }
         public string Indhold { get; set; }
-        public int UserId { get; set; }
+        public int Uid { get; set; }
 
         public Recipes()
         {}
-        public Recipes (string overskrift, string indhold)
+        public Recipes (string overskrift, string indhold, int uid)
         {
             this.Overskrift = overskrift;
             this.Indhold = indhold;
+            this.Uid = uid;
         }
 
         public bool CheckInformation()
