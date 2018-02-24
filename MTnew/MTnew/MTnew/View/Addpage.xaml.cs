@@ -13,20 +13,23 @@ namespace MTnew.View
         public Addpage()
         {
             InitializeComponent();
+
         }
 
         void AddButton (object sender, EventArgs e)
         {
-            Recipes recipes = new Recipes(Lbl_Overskrift.Text, Lbl_beskrivelse.Text);
+            Recipes recipes = new Recipes(Entry_Overskrift.Text, Entry_Beskrivelse.Text);
 
 
-            if (recipes.CheckInformation())
-            {
-                DisplayAlert("The dish", "The dish is added", "OK");
-            }
-            else
+            if (Entry_Overskrift.Text == "Write here" || Entry_Overskrift.Text == "")
             {
                 DisplayAlert("The dish", "You need a headline", "OK");
+                BTN_AddDish.BackgroundColor = Color.Gray;
+            }
+            else if (Entry_Overskrift.Text != "Write here" || Entry_Overskrift.Text != "")
+            {
+                DisplayAlert("The dish", "The dish is added", "OK");
+
             }
         }
 
@@ -39,10 +42,15 @@ namespace MTnew.View
 
         void Overskrift_Change(object sender, TextChangedEventArgs e)
         {
-            if (!Entry_Overskrift.Equals("Write here"))
+            if (!Entry_Overskrift.Text.Equals("Write here"))
             {
                 BTN_AddDish.BackgroundColor = Color.MediumSpringGreen;
             }
+            else if (Entry_Overskrift.Text.Contains(""))
+            {
+                BTN_AddDish.BackgroundColor = Color.Gray;
+            }
+
         }
     }
 }

@@ -24,7 +24,7 @@
                 <DataTemplate>                    
                     <ViewCell>                            
                         <RelativeLayout>
-                                <Label Text=" - "                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
+                                <Label Text=" - " FontSize = "25"               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"
                                                                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"/>
 
                                 <Label Text="{Binding Overskrift}" Font = "25"  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=25}"

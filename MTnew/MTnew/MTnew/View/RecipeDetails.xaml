@@ -21,8 +21,8 @@
             </StackLayout>
 
             <StackLayout BackgroundColor="#2196F3" Padding="10" Margin="10" HeightRequest="200">                
-                    <Label Text="Ingredients:" FontSize="25" TextColor="Black"></Label>
-                    <Label Text="{Binding Rec.Indhold}" TextColor = "Black"></Label>
+                    <Label Text="Ingredients:" FontSize="40" TextColor="Black"></Label>
+                    <Label Text="{Binding Rec.Indhold}" TextColor = "Black" FontSize = "25"></Label>
             </StackLayout>
             
         </StackLayout>

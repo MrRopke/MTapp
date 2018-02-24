@@ -24,7 +24,7 @@ namespace MTnew.Models
 
         public bool CheckInformation()
         {
-            if (!this.Overskrift.Equals("") || !this.Overskrift.Equals("Write here"))
+            if (!this.Overskrift.Equals("Write here") || !this.Overskrift.Equals(""))
             {
                 return true;
             }
