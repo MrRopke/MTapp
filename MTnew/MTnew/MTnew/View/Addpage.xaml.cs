@@ -1,8 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using MTnew.View;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 using MTnew.Models;
+using MTnew.View;
+using MTnew.ViewModels;
+using Newtonsoft.Json;
+using System.Net.Http;
+
 
 namespace MTnew.View
 {
