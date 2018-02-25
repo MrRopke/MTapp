@@ -35,7 +35,7 @@ namespace MTnew
 
 
         }
-
+        //Connetion for the api
         public async Task GetRecipesAsync(int id)
         {
             var client = new System.Net.Http.HttpClient();
@@ -47,22 +47,24 @@ namespace MTnew
 
             Opliste.ItemsSource = Opskriftsliste;
         }
-
+            //If a recipe is pushed, this will make you to the recipedetails.
             private async void MyRecipeTapped(object sender, ItemTappedEventArgs e)
         {
             var recipee = e.Item as Recipes;
             await Navigation.PushModalAsync(new RecipeDetails(new RecipeViewModel(recipee)));
         }
 
-        public void lavopskrift(int id, string overskrift, string indhold)
-        {
-            Recipes rc = new Recipes();
-            rc.Rid = id;
-            rc.Overskrift = overskrift;
-            rc.Indhold = indhold;
-            Opskriftsliste.Add(rc);
-        }
 
+        //public void lavopskrift(int id, string overskrift, string indhold)
+        //{
+        //    Recipes rc = new Recipes();
+        //    rc.Rid = id;
+        //    rc.Overskrift = overskrift;
+        //    rc.Indhold = indhold;
+        //    Opskriftsliste.Add(rc);
+        //}
+
+        //Getting to the addpage
         void AddPage(object sender, EventArgs args)
         {
             Navigation.PushModalAsync(new Addpage());

@@ -19,7 +19,7 @@ namespace MTnew.View
         {
             InitializeComponent();
         }
-
+        //a constructor who get information from the list.
         public RecipeDetails(RecipeViewModel viewModel)
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace MTnew.View
             BindingContext = this.viewModel = viewModel;
         }
 
+        //Getting back to the mainpage
         void Backvoid(object sender, EventArgs args)
         {
             //await NavigationPage(new MTnew.MainPage());

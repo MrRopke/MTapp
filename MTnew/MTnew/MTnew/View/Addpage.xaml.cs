@@ -23,6 +23,7 @@ namespace MTnew.View
             InitializeComponent();
         }
 
+        //The api connection
         public async Task PostRecipe(Recipes recipee)
         {
             var client = new System.Net.Http.HttpClient();
@@ -35,38 +36,36 @@ namespace MTnew.View
 
             response = await client.PostAsync(uri, content);
 
-            if (response.IsSuccessStatusCode)
+            //If there is no respond to the api
+            if (!response.IsSuccessStatusCode)
             {
-                await DisplayAlert("The dish", "The dish is added", "OK");
-
+                await DisplayAlert("Error", "The server doesn't respond", "OK");
             }
         }
 
+        //Putting the information from the app in to the api/server
         void AddButton (object sender, EventArgs e)
         {
-            Recipes recipee = new Recipes();
-
-            recipee.Overskrift = Entry_Overskrift.Text;
-            recipee.Indhold = Entry_Beskrivelse.Text;
-            recipee.Uid = 1;
-
-            PostRecipe(recipee);
-
-            //Recipes recipes = new Recipes(Entry_Overskrift.Text, Entry_Beskrivelse.Text);
+            Recipes recipee = new Recipes(Entry_Overskrift.Text, Entry_Beskrivelse.Text, 1 );
 
 
-            //if (Entry_Overskrift.Text == "Write here" || Entry_Overskrift.Text == "")
-            //{
-            //    DisplayAlert("The dish", "You need a headline", "OK");
-            //    BTN_AddDish.BackgroundColor = Color.Gray;
-            //}
-            //else if (Entry_Overskrift.Text != "Write here" || Entry_Overskrift.Text != "")
-            //{
-            //    DisplayAlert("The dish", "The dish is added", "OK");
+            //If there i nothing in the entry field in the app
+            if (!recipee.CheckInformation())
+            {
+                DisplayAlert("The dish", "You need a headline", "OK");
+                BTN_AddDish.BackgroundColor = Color.Gray;
 
-            //}
+            }
+            //If there is information in the entry
+            else if (recipee.CheckInformation())
+            {
+                var result = DisplayAlert("The dish", "The dish is added", null, "Ok");
+                PostRecipe(recipee);
+                Navigation.PushModalAsync(new MainPage());
+            }
         }
 
+        //Getting back to the mainpage
         void Backvoid(object sender, EventArgs args)
         {
             //await NavigationPage(new MTnew.MainPage());
@@ -74,6 +73,7 @@ namespace MTnew.View
             Navigation.PopModalAsync();
         }
 
+        //if the information in the entry are change.
         void Overskrift_Change(object sender, TextChangedEventArgs e)
         {
             if (!Entry_Overskrift.Text.Equals("Write here"))

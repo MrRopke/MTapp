@@ -20,7 +20,5 @@ namespace MTnew.ViewModels
             Rec = recipe;
 
         }
-
-
     }
 }

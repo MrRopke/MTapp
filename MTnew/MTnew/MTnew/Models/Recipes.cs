@@ -23,9 +23,10 @@ namespace MTnew.Models
             this.Uid = uid;
         }
 
+        //If the placeholder isnt null, witch its return to a string, when there is nothing in it.
         public bool CheckInformation()
         {
-            if (!this.Overskrift.Equals("Write here") || !this.Overskrift.Equals(""))
+            if (this.Overskrift != null)
             {
                 return true;
             }
@@ -34,11 +35,5 @@ namespace MTnew.Models
                 return false;
             }
         }
-
-
-
-
-
-
     }
 }
