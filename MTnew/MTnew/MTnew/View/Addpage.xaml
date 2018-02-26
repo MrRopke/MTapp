@@ -22,9 +22,9 @@
             <StackLayout >
                 <StackLayout BackgroundColor="#2196F3">
                     
-                    <Label x:Name = "Lbl_Overskrift" Text = "Headline" FontAttributes = "Bold" FontSize = "50" HorizontalTextAlignment ="Center" TextColor = "Black"/>     
+                    <Label x:Name = "Lbl_Overskrift" Text = "Headline" FontAttributes = "Bold" FontSize = "50" HorizontalTextAlignment ="Center" TextColor = "Black" BackgroundColor="Transparent"/>     
                     <Entry x:Name = "Entry_Overskrift" Placeholder = "Write here" HorizontalTextAlignment ="Center" TextChanged = "Overskrift_Change"/>
-                    <Label x:Name = "Lbl_beskrivelse" Text = "Description" Font = "30" HorizontalTextAlignment ="Center" TextColor = "Black"/>
+                    <Label x:Name = "Lbl_beskrivelse" Text = "Description" Font = "30" HorizontalTextAlignment ="Center" TextColor = "Black" BackgroundColor="Transparent"/>
                     <Editor x:Name = "Entry_Beskrivelse"  VerticalOptions = "EndAndExpand"  HeightRequest = "80" />
                         <StackLayout Margin = "30,0,30,0">
                             <Button x:Name = "BTN_AddDish" Text = "Add your dish" Clicked = "AddButton" BackgroundColor = "Gray" HeightRequest = "60" />
