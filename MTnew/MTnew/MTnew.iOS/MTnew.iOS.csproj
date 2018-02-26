@@ -115,6 +115,7 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\LogoIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -139,7 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MTnew\MTnew.csproj">
-      <Project>{ba27f5b1-18d8-4933-830e-7ce600c5603e}</Project>
+      <Project>{B1EA3EEC-B7F7-49CD-8C68-DF611B1F2EEA}</Project>
       <Name>MTnew</Name>
     </ProjectReference>
   </ItemGroup>

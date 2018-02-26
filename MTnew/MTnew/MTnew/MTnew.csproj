@@ -50,6 +50,14 @@
     <Compile Include="View\Addpage.xaml.cs">
       <DependentUpon>Addpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Editpage.cs">
+      <DependentUpon>Editpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loginpage.xaml.cs">
+      <DependentUpon>Loginpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\MainPage.xaml">
@@ -61,6 +69,14 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Addpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loginpage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MTnew.View;
 
 using Xamarin.Forms;
 
@@ -13,7 +14,8 @@ namespace MTnew
         {
             InitializeComponent();
 
-            MainPage = new MainPage(); // new NavigationPage(new MTnew.MainPage());
+            //MainPage = new MainPage(); // new NavigationPage(new MTnew.MainPage());
+            MainPage = new Loginpage();
         }
 
         protected override void OnStart()
