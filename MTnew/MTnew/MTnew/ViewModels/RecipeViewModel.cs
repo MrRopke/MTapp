@@ -16,9 +16,8 @@ namespace MTnew.ViewModels
         public Recipes Rec { get; set; }
 
         public RecipeViewModel(Recipes recipe = null)
-        {
+        {   
             Rec = recipe;
-
         }
     }
 }

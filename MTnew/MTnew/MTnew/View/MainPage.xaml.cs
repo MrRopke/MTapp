@@ -10,21 +10,22 @@ using MTnew.View;
 using MTnew.ViewModels;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Collections.ObjectModel;
 
 
 namespace MTnew
 {
     public partial class MainPage : ContentPage
     {
-        public List<Recipes> Opskriftsliste = new List<Recipes>();
+        public ObservableCollection<Recipes> Opskriftsliste = new ObservableCollection<Recipes>();
+        //public List<Recipes> Opskriftsliste = new List<Recipes>();
 
         public int UserId = 1;
 
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
             GetRecipesAsync(UserId);
-
 
             //lavopskrift(1, "Karry ret", "- Karry");
             //lavopskrift(2, "Kokos ret", "- Kokos");
@@ -32,9 +33,9 @@ namespace MTnew
             //Opliste.ItemsSource = Opskriftsliste;
 
             //Opskriftsliste.Add(new Recipes() { Rid = 1, Overskrift = "Mads Boller i Karry", Indhold = "- Karry og boller" });
-
-
         }
+
+
         //Connetion for the api
         public async Task GetRecipesAsync(int id)
         {
@@ -43,15 +44,16 @@ namespace MTnew
             var address = $"http://mrropke-001-site1.gtempurl.com/api/retters/{id}";
             var response = await client.GetAsync(address);
             var CoinJson = response.Content.ReadAsStringAsync().Result;
-            Opskriftsliste = JsonConvert.DeserializeObject<List<Recipes>>(CoinJson);
+            Opskriftsliste = JsonConvert.DeserializeObject<ObservableCollection<Recipes>>(CoinJson);
 
             Opliste.ItemsSource = Opskriftsliste;
         }
+
             //If a recipe is pushed, this will make you to the recipedetails.
-            private async void MyRecipeTapped(object sender, ItemTappedEventArgs e)
-        {
-            var recipee = e.Item as Recipes;
-            await Navigation.PushModalAsync(new RecipeDetails(new RecipeViewModel(recipee)));
+        private async void MyRecipeTapped(object sender, ItemTappedEventArgs e)
+        {            
+            var recipee = e.Item as Recipes;                           
+            await Navigation.PushModalAsync(new RecipeDetails(new RecipeViewModel(recipee), recipee.Rid));
         }
 
 

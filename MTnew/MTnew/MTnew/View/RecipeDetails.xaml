@@ -16,13 +16,17 @@
                     <Label Text="{Binding Rec.Overskrift}" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                    <Button Text="Edit" TextColor="White" BackgroundColor = "#0961aa"/>
+                    <Button x:Name="EditBtn" Text="Edit" TextColor="White" BackgroundColor = "#0961aa"/>
                 </StackLayout>
             </StackLayout>
 
             <StackLayout BackgroundColor="#2196F3" Padding="10" Margin="10" HeightRequest="200">                
                     <Label Text="Ingredients:" FontSize="40" TextColor="Black"></Label>
                     <Label Text="{Binding Rec.Indhold}" TextColor = "Black" FontSize = "25"></Label>
+            </StackLayout>
+
+            <StackLayout Margin="10">
+                <Button Text="Delete" HorizontalOptions="EndAndExpand" BackgroundColor="Red" Clicked="DeleteBTN"></Button>
             </StackLayout>
             
         </StackLayout>

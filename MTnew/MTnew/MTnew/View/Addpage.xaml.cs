@@ -16,8 +16,6 @@ namespace MTnew.View
 {
     public partial class Addpage : ContentPage
     {
-
-
         public Addpage()
         {
             InitializeComponent();
